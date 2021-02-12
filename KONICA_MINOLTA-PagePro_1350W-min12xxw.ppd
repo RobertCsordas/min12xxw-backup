@@ -1,0 +1,511 @@
+*PPD-Adobe: "4.3"
+*%
+*% For information on using this, and to obtain the required backend
+*% script, consult http://www.openprinting.org/
+*%
+*% This file is published under the GNU General Public License
+*%
+*% PPD-O-MATIC (4.0.0 or newer) generated this PPD file. It is for use with 
+*% all programs and environments which use PPD files for dealing with
+*% printer capability information. The printer must be configured with the
+*% "foomatic-rip" backend filter script of Foomatic 4.0.0 or newer. This 
+*% file and "foomatic-rip" work together to support PPD-controlled printer
+*% driver option access with all supported printer drivers and printing
+*% spoolers.
+*%
+*% To save this file on your disk, wait until the download has completed
+*% (the animation of the browser logo must stop) and then use the
+*% "Save as..." command in the "File" menu of your browser or in the 
+*% pop-up manu when you click on this document with the right mouse button.
+*% DO NOT cut and paste this file into an editor with your mouse. This can
+*% introduce additional line breaks which lead to unexpected results.
+*%
+*% You may save this file as 'KONICA_MINOLTA-PagePro_1350W-min12xxw.ppd'
+*%
+*%
+*FormatVersion:	"4.3"
+*FileVersion:	"1.1"
+*LanguageVersion: English 
+*LanguageEncoding: ISOLatin1
+*PCFileName:	"MIN12XXW.PPD"
+*Manufacturer:	"KONICA MINOLTA"
+*Product:	"(PP1350W)"
+*cupsVersion:	1.0
+*cupsManualCopies: True
+*cupsModelNumber:  2
+*cupsFilter:	"application/vnd.cups-postscript 100 foomatic-rip"
+*cupsFilter:	"application/vnd.cups-pdf 0 foomatic-rip"
+*%pprRIP:        foomatic-rip other
+*ModelName:     "KONICA MINOLTA PagePro 1350W"
+*ShortNickName: "K. MINOLTA P.Pro 1350W min12xxw"
+*NickName:      "KONICA MINOLTA PagePro 1350W Foomatic/min12xxw (recommended)"
+*PSVersion:	"(3010.000) 550"
+*PSVersion:	"(3010.000) 651"
+*PSVersion:	"(3010.000) 652"
+*PSVersion:	"(3010.000) 653"
+*PSVersion:	"(3010.000) 704"
+*PSVersion:	"(3010.000) 705"
+*PSVersion:	"(3010.000) 800"
+*PSVersion:	"(3010.000) 815"
+*PSVersion:	"(3010.000) 850"
+*PSVersion:	"(3010.000) 860"
+*PSVersion:	"(3010.000) 861"
+*PSVersion:	"(3010.000) 862"
+*PSVersion:	"(3010.000) 863"
+*PSVersion:	"(3010.000) 864"
+*PSVersion:	"(3010.000) 870"
+*LanguageLevel:	"3"
+*ColorDevice:	False
+*DefaultColorSpace: Gray
+*FileSystem:	False
+*Throughput:	"1"
+*LandscapeOrientation: Plus90
+*TTRasterizer:	Type42
+*1284DeviceID: "MFG:KONICA MINOLTA;MDL:PP1350W;CMD:NA;DES:KONICA MINOLTA PP1350W;DRV:Dmin12xxw,R1,M0,F1,P0,TF;"
+
+*driverName min12xxw: ""
+*driverType F/Filter: ""
+*driverUrl: "http://www.hinterbergen.de/mala/min12xxw/"
+*driverObsolete: False
+*driverManufacturerSupplied: False
+*driverFreeSoftware: True
+
+
+
+
+*VariablePaperSize: False
+
+*FoomaticIDs: KONICA_MINOLTA-PagePro_1350W min12xxw
+*FoomaticRIPCommandLine: "gs -q -dNOPAUSE -dNOMEDIAATTRS -dNOINTERPOLA&&
+TE -dPARANOIDSAFER -dBATCH -sDEVICE=pbmraw%A%Z -sOutputFile=- - | min1&&
+2xxw%B"
+*End
+
+*OpenGroup: General/General
+
+*OpenUI *MediaType/Media Type: PickOne
+*FoomaticRIPOption MediaType: enum CmdLine B
+*OrderDependency: 120 AnySetup *MediaType
+*DefaultMediaType: Normal
+*MediaType Normal/Normal Paper: "%% FoomaticRIPOptionSetting: MediaType=Normal"
+*FoomaticRIPOptionSetting MediaType=Normal: " -p normal"
+*MediaType Envelope/Envelope: "%% FoomaticRIPOptionSetting: MediaType=Envelope"
+*FoomaticRIPOptionSetting MediaType=Envelope: " -p envelope"
+*MediaType Postcard/Postcard: "%% FoomaticRIPOptionSetting: MediaType=Postcard"
+*FoomaticRIPOptionSetting MediaType=Postcard: " -p postcard"
+*MediaType Thick/Thick Paper: "%% FoomaticRIPOptionSetting: MediaType=Thick"
+*FoomaticRIPOptionSetting MediaType=Thick: " -p thick"
+*CloseUI: *MediaType
+
+*OpenUI *InputSlot/Media Source: PickOne
+*FoomaticRIPOption InputSlot: enum CmdLine B
+*OrderDependency: 150 AnySetup *InputSlot
+*DefaultInputSlot: Default
+*InputSlot Default/Printer Default: "%% FoomaticRIPOptionSetting: InputSlot=Default"
+*FoomaticRIPOptionSetting InputSlot=Default: " -t auto"
+*InputSlot Tray1/Tray 1: "%% FoomaticRIPOptionSetting: InputSlot=Tray1"
+*FoomaticRIPOptionSetting InputSlot=Tray1: " -t tray1"
+*InputSlot Tray2/Tray 2: "%% FoomaticRIPOptionSetting: InputSlot=Tray2"
+*FoomaticRIPOptionSetting InputSlot=Tray2: " -t tray2"
+*InputSlot Manual/Manual Feeder: "%% FoomaticRIPOptionSetting: InputSlot=Manual"
+*FoomaticRIPOptionSetting InputSlot=Manual: " -t manual"
+*CloseUI: *InputSlot
+
+*OpenUI *Economode/Economy Mode: PickOne
+*FoomaticRIPOption Economode: enum CmdLine B
+*OrderDependency: 200 AnySetup *Economode
+*DefaultEconomode: Off
+*Economode Off/Off: "%% FoomaticRIPOptionSetting: Economode=Off"
+*FoomaticRIPOptionSetting Economode=Off: ""
+*Economode On/On: "%% FoomaticRIPOptionSetting: Economode=On"
+*FoomaticRIPOptionSetting Economode=On: " -e"
+*CloseUI: *Economode
+
+*OpenUI *PageSize/Page Size: PickOne
+*FoomaticRIPOption PageSize: enum Composite A
+*OrderDependency: 99 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize Letter/Letter: "%% FoomaticRIPOptionSetting: PageSize=Letter"
+*FoomaticRIPOptionSetting PageSize=Letter: "DriverPageSize=Letter GSPa&&
+geSize=Letter"
+*End
+*PageSize A4/A4: "%% FoomaticRIPOptionSetting: PageSize=A4"
+*FoomaticRIPOptionSetting PageSize=A4: "DriverPageSize=A4 GSPageSize=A&&
+4"
+*End
+*PageSize A5/A5: "%% FoomaticRIPOptionSetting: PageSize=A5"
+*FoomaticRIPOptionSetting PageSize=A5: "DriverPageSize=A5 GSPageSize=A&&
+5"
+*End
+*PageSize Env10/Envelope #10: "%% FoomaticRIPOptionSetting: PageSize=Env10"
+*FoomaticRIPOptionSetting PageSize=Env10: "DriverPageSize=Env10 GSPage&&
+Size=Env10"
+*End
+*PageSize EnvC5/Envelope C5: "%% FoomaticRIPOptionSetting: PageSize=EnvC5"
+*FoomaticRIPOptionSetting PageSize=EnvC5: "DriverPageSize=EnvC5 GSPage&&
+Size=EnvC5"
+*End
+*PageSize EnvC6/Envelope C6: "%% FoomaticRIPOptionSetting: PageSize=EnvC6"
+*FoomaticRIPOptionSetting PageSize=EnvC6: "DriverPageSize=EnvC6 GSPage&&
+Size=EnvC6"
+*End
+*PageSize EnvDL/Envelope DL: "%% FoomaticRIPOptionSetting: PageSize=EnvDL"
+*FoomaticRIPOptionSetting PageSize=EnvDL: "DriverPageSize=EnvDL GSPage&&
+Size=EnvDL"
+*End
+*PageSize EnvISOB5/Envelope B5: "%% FoomaticRIPOptionSetting: PageSize=EnvISOB5"
+*FoomaticRIPOptionSetting PageSize=EnvISOB5: "DriverPageSize=EnvISOB5 &&
+GSPageSize=EnvISOB5"
+*End
+*PageSize EnvMonarch/Envelope Monarch: "%% FoomaticRIPOptionSetting: PageSize=EnvMonarch"
+*FoomaticRIPOptionSetting PageSize=EnvMonarch: "DriverPageSize=EnvMona&&
+rch GSPageSize=EnvMonarch"
+*End
+*PageSize Executive/Executive: "%% FoomaticRIPOptionSetting: PageSize=Executive"
+*FoomaticRIPOptionSetting PageSize=Executive: "DriverPageSize=Executiv&&
+e GSPageSize=Executive"
+*End
+*PageSize Folio/Folio: "%% FoomaticRIPOptionSetting: PageSize=Folio"
+*FoomaticRIPOptionSetting PageSize=Folio: "DriverPageSize=Folio GSPage&&
+Size=Folio"
+*End
+*PageSize Hagaki/Hagaki: "%% FoomaticRIPOptionSetting: PageSize=Hagaki"
+*FoomaticRIPOptionSetting PageSize=Hagaki: "DriverPageSize=Hagaki GSPa&&
+geSize=Hagaki"
+*End
+*PageSize HalfLetter/Half Letter: "%% FoomaticRIPOptionSetting: PageSize=HalfLetter"
+*FoomaticRIPOptionSetting PageSize=HalfLetter: "DriverPageSize=HalfLet&&
+ter GSPageSize=HalfLetter"
+*End
+*PageSize Legal/Legal: "%% FoomaticRIPOptionSetting: PageSize=Legal"
+*FoomaticRIPOptionSetting PageSize=Legal: "DriverPageSize=Legal GSPage&&
+Size=Legal"
+*End
+*PageSize Oufuku/Oufuku: "%% FoomaticRIPOptionSetting: PageSize=Oufuku"
+*FoomaticRIPOptionSetting PageSize=Oufuku: "DriverPageSize=Oufuku GSPa&&
+geSize=Oufuku"
+*End
+*PageSize w255h581/Choukei-4Gou: "%% FoomaticRIPOptionSetting: PageSize=w255h581"
+*FoomaticRIPOptionSetting PageSize=w255h581: "DriverPageSize=w255h581 &&
+GSPageSize=w255h581"
+*End
+*PageSize w261h468/Envelope 6 1/2: "%% FoomaticRIPOptionSetting: PageSize=w261h468"
+*FoomaticRIPOptionSetting PageSize=w261h468: "DriverPageSize=w261h468 &&
+GSPageSize=w261h468"
+*End
+*PageSize w278h539/JIS Yokei 6-gou: "%% FoomaticRIPOptionSetting: PageSize=w278h539"
+*FoomaticRIPOptionSetting PageSize=w278h539: "DriverPageSize=w278h539 &&
+GSPageSize=w278h539"
+*End
+*PageSize w298h666/JIS Yokei 2-gou: "%% FoomaticRIPOptionSetting: PageSize=w298h666"
+*FoomaticRIPOptionSetting PageSize=w298h666: "DriverPageSize=w298h666 &&
+GSPageSize=w298h666"
+*End
+*PageSize w340h499/JIS Yokei 1-gou: "%% FoomaticRIPOptionSetting: PageSize=w340h499"
+*FoomaticRIPOptionSetting PageSize=w340h499: "DriverPageSize=w340h499 &&
+GSPageSize=w340h499"
+*End
+*PageSize w340h666/JIS Yokei 0-gou: "%% FoomaticRIPOptionSetting: PageSize=w340h666"
+*FoomaticRIPOptionSetting PageSize=w340h666: "DriverPageSize=w340h666 &&
+GSPageSize=w340h666"
+*End
+*PageSize w369h524/Chinese 32K: "%% FoomaticRIPOptionSetting: PageSize=w369h524"
+*FoomaticRIPOptionSetting PageSize=w369h524: "DriverPageSize=w369h524 &&
+GSPageSize=w369h524"
+*End
+*PageSize w524h737/Chinese 16K: "%% FoomaticRIPOptionSetting: PageSize=w524h737"
+*FoomaticRIPOptionSetting PageSize=w524h737: "DriverPageSize=w524h737 &&
+GSPageSize=w524h737"
+*End
+*PageSize w567h839/Quad postcard: "%% FoomaticRIPOptionSetting: PageSize=w567h839"
+*FoomaticRIPOptionSetting PageSize=w567h839: "DriverPageSize=w567h839 &&
+GSPageSize=w567h839"
+*End
+*PageSize w612h756/G. Letter: "%% FoomaticRIPOptionSetting: PageSize=w612h756"
+*FoomaticRIPOptionSetting PageSize=w612h756: "DriverPageSize=w612h756 &&
+GSPageSize=w612h756"
+*End
+*PageSize w612h936/G. Legal: "%% FoomaticRIPOptionSetting: PageSize=w612h936"
+*FoomaticRIPOptionSetting PageSize=w612h936: "DriverPageSize=w612h936 &&
+GSPageSize=w612h936"
+*End
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 99 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*PageRegion Letter/Letter: "%% FoomaticRIPOptionSetting: PageSize=Letter"
+*PageRegion A4/A4: "%% FoomaticRIPOptionSetting: PageSize=A4"
+*PageRegion A5/A5: "%% FoomaticRIPOptionSetting: PageSize=A5"
+*PageRegion Env10/Envelope #10: "%% FoomaticRIPOptionSetting: PageSize=Env10"
+*PageRegion EnvC5/Envelope C5: "%% FoomaticRIPOptionSetting: PageSize=EnvC5"
+*PageRegion EnvC6/Envelope C6: "%% FoomaticRIPOptionSetting: PageSize=EnvC6"
+*PageRegion EnvDL/Envelope DL: "%% FoomaticRIPOptionSetting: PageSize=EnvDL"
+*PageRegion EnvISOB5/Envelope B5: "%% FoomaticRIPOptionSetting: PageSize=EnvISOB5"
+*PageRegion EnvMonarch/Envelope Monarch: "%% FoomaticRIPOptionSetting: PageSize=EnvMonarch"
+*PageRegion Executive/Executive: "%% FoomaticRIPOptionSetting: PageSize=Executive"
+*PageRegion Folio/Folio: "%% FoomaticRIPOptionSetting: PageSize=Folio"
+*PageRegion Hagaki/Hagaki: "%% FoomaticRIPOptionSetting: PageSize=Hagaki"
+*PageRegion HalfLetter/Half Letter: "%% FoomaticRIPOptionSetting: PageSize=HalfLetter"
+*PageRegion Legal/Legal: "%% FoomaticRIPOptionSetting: PageSize=Legal"
+*PageRegion Oufuku/Oufuku: "%% FoomaticRIPOptionSetting: PageSize=Oufuku"
+*PageRegion w255h581/Choukei-4Gou: "%% FoomaticRIPOptionSetting: PageSize=w255h581"
+*PageRegion w261h468/Envelope 6 1/2: "%% FoomaticRIPOptionSetting: PageSize=w261h468"
+*PageRegion w278h539/JIS Yokei 6-gou: "%% FoomaticRIPOptionSetting: PageSize=w278h539"
+*PageRegion w298h666/JIS Yokei 2-gou: "%% FoomaticRIPOptionSetting: PageSize=w298h666"
+*PageRegion w340h499/JIS Yokei 1-gou: "%% FoomaticRIPOptionSetting: PageSize=w340h499"
+*PageRegion w340h666/JIS Yokei 0-gou: "%% FoomaticRIPOptionSetting: PageSize=w340h666"
+*PageRegion w369h524/Chinese 32K: "%% FoomaticRIPOptionSetting: PageSize=w369h524"
+*PageRegion w524h737/Chinese 16K: "%% FoomaticRIPOptionSetting: PageSize=w524h737"
+*PageRegion w567h839/Quad postcard: "%% FoomaticRIPOptionSetting: PageSize=w567h839"
+*PageRegion w612h756/G. Letter: "%% FoomaticRIPOptionSetting: PageSize=w612h756"
+*PageRegion w612h936/G. Legal: "%% FoomaticRIPOptionSetting: PageSize=w612h936"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: Letter
+*ImageableArea Letter/Letter: "12.24 12.24 599.76 779.76"
+*ImageableArea A4/A4: "12.24 12.24 582.76 829.76"
+*ImageableArea A5/A5: "12.24 12.24 407.76 582.76"
+*ImageableArea Env10/Envelope #10: "12.24 12.24 284.76 671.76"
+*ImageableArea EnvC5/Envelope C5: "12.24 12.24 446.76 636.76"
+*ImageableArea EnvC6/Envelope C6: "12.24 12.24 310.76 446.76"
+*ImageableArea EnvDL/Envelope DL: "12.24 12.24 298.76 610.76"
+*ImageableArea EnvISOB5/Envelope B5: "12.24 12.24 485.76 695.76"
+*ImageableArea EnvMonarch/Envelope Monarch: "12.24 12.24 266.76 527.76"
+*ImageableArea Executive/Executive: "12.24 12.24 509.76 743.76"
+*ImageableArea Folio/Folio: "12.24 12.24 599.76 923.76"
+*ImageableArea Hagaki/Hagaki: "12.24 12.24 270.76 407.76"
+*ImageableArea HalfLetter/Half Letter: "12.24 12.24 383.76 599.76"
+*ImageableArea Legal/Legal: "12.24 12.24 599.76 995.76"
+*ImageableArea Oufuku/Oufuku: "12.24 12.24 407.76 554.76"
+*ImageableArea w255h581/Choukei-4Gou: "12.24 12.24 242.76 568.76"
+*ImageableArea w261h468/Envelope 6 1/2: "12.24 12.24 248.76 455.76"
+*ImageableArea w278h539/JIS Yokei 6-gou: "12.24 12.24 265.76 526.76"
+*ImageableArea w298h666/JIS Yokei 2-gou: "12.24 12.24 285.76 653.76"
+*ImageableArea w340h499/JIS Yokei 1-gou: "12.24 12.24 327.76 486.76"
+*ImageableArea w340h666/JIS Yokei 0-gou: "12.24 12.24 327.76 653.76"
+*ImageableArea w369h524/Chinese 32K: "12.24 12.24 356.76 511.76"
+*ImageableArea w524h737/Chinese 16K: "12.24 12.24 511.76 724.76"
+*ImageableArea w567h839/Quad postcard: "12.24 12.24 554.76 826.76"
+*ImageableArea w612h756/G. Letter: "12.24 12.24 599.76 743.76"
+*ImageableArea w612h936/G. Legal: "12.24 12.24 599.76 923.76"
+
+*DefaultPaperDimension: Letter
+*PaperDimension Letter/Letter: "612 792"
+*PaperDimension A4/A4: "595 842"
+*PaperDimension A5/A5: "420 595"
+*PaperDimension Env10/Envelope #10: "297 684"
+*PaperDimension EnvC5/Envelope C5: "459 649"
+*PaperDimension EnvC6/Envelope C6: "323 459"
+*PaperDimension EnvDL/Envelope DL: "311 623"
+*PaperDimension EnvISOB5/Envelope B5: "498 708"
+*PaperDimension EnvMonarch/Envelope Monarch: "279 540"
+*PaperDimension Executive/Executive: "522 756"
+*PaperDimension Folio/Folio: "612 936"
+*PaperDimension Hagaki/Hagaki: "283 420"
+*PaperDimension HalfLetter/Half Letter: "396 612"
+*PaperDimension Legal/Legal: "612 1008"
+*PaperDimension Oufuku/Oufuku: "420 567"
+*PaperDimension w255h581/Choukei-4Gou: "255 581"
+*PaperDimension w261h468/Envelope 6 1/2: "261 468"
+*PaperDimension w278h539/JIS Yokei 6-gou: "278 539"
+*PaperDimension w298h666/JIS Yokei 2-gou: "298 666"
+*PaperDimension w340h499/JIS Yokei 1-gou: "340 499"
+*PaperDimension w340h666/JIS Yokei 0-gou: "340 666"
+*PaperDimension w369h524/Chinese 32K: "369 524"
+*PaperDimension w524h737/Chinese 16K: "524 737"
+*PaperDimension w567h839/Quad postcard: "567 839"
+*PaperDimension w612h756/G. Letter: "612 756"
+*PaperDimension w612h936/G. Legal: "612 936"
+
+*OpenUI *Resolution/Resolution: PickOne
+*FoomaticRIPOption Resolution: enum Composite A
+*OrderDependency: 99 AnySetup *Resolution
+*DefaultResolution: 600x600dpi
+*Resolution 300x300dpi/300x300 DPI: "%% FoomaticRIPOptionSetting: Resolution=300x300dpi"
+*FoomaticRIPOptionSetting Resolution=300x300dpi: "DriverResolution=300&&
+x300dpi GSResolution=300x300dpi"
+*End
+*Resolution 600x600dpi/600x600 DPI: "%% FoomaticRIPOptionSetting: Resolution=600x600dpi"
+*FoomaticRIPOptionSetting Resolution=600x600dpi: "DriverResolution=600&&
+x600dpi GSResolution=600x600dpi"
+*End
+*Resolution 1200x600dpi/1200x600 DPI: "%% FoomaticRIPOptionSetting: Resolution=1200x600dpi"
+*FoomaticRIPOptionSetting Resolution=1200x600dpi: "DriverResolution=12&&
+00x600dpi GSResolution=1200x600dpi"
+*End
+*Resolution 1200x1200dpi/1200x1200 DPI: "%% FoomaticRIPOptionSetting: Resolution=1200x1200dpi"
+*FoomaticRIPOptionSetting Resolution=1200x1200dpi: "DriverResolution=1&&
+200x1200dpi GSResolution=1200x1200dpi"
+*End
+*CloseUI: *Resolution
+
+*FoomaticRIPOption Model: enum CmdLine B 50
+*FoomaticRIPOptionSetting Model=1350W: " -m 1350W"
+
+*FoomaticRIPOption DriverPageSize: enum CmdLine B 100
+*FoomaticRIPOptionSetting DriverPageSize=FromPageSize: ""
+*FoomaticRIPOptionSetting DriverPageSize=Letter: " -f letter"
+*FoomaticRIPOptionSetting DriverPageSize=A4: " -f a4"
+*FoomaticRIPOptionSetting DriverPageSize=A5: " -f a5"
+*FoomaticRIPOptionSetting DriverPageSize=Env10: " -f env10"
+*FoomaticRIPOptionSetting DriverPageSize=EnvC5: " -f envc5"
+*FoomaticRIPOptionSetting DriverPageSize=EnvC6: " -f envc6"
+*FoomaticRIPOptionSetting DriverPageSize=EnvDL: " -f envdl"
+*FoomaticRIPOptionSetting DriverPageSize=EnvISOB5: " -f envb5"
+*FoomaticRIPOptionSetting DriverPageSize=EnvMonarch: " -f envmonarch"
+*FoomaticRIPOptionSetting DriverPageSize=Executive: " -f executive"
+*FoomaticRIPOptionSetting DriverPageSize=Folio: " -f folio"
+*FoomaticRIPOptionSetting DriverPageSize=Hagaki: " -f jpost"
+*FoomaticRIPOptionSetting DriverPageSize=HalfLetter: " -f halfletter"
+*FoomaticRIPOptionSetting DriverPageSize=Legal: " -f legal"
+*FoomaticRIPOptionSetting DriverPageSize=Oufuku: " -f corpost"
+*FoomaticRIPOptionSetting DriverPageSize=w255h581: " -f Choukei-4Gou"
+*FoomaticRIPOptionSetting DriverPageSize=w261h468: " -f envb6"
+*FoomaticRIPOptionSetting DriverPageSize=w278h539: " -f jisy6"
+*FoomaticRIPOptionSetting DriverPageSize=w298h666: " -f jisy2"
+*FoomaticRIPOptionSetting DriverPageSize=w340h499: " -f jisy1"
+*FoomaticRIPOptionSetting DriverPageSize=w340h666: " -f jisy0"
+*FoomaticRIPOptionSetting DriverPageSize=w369h524: " -f chinese32k"
+*FoomaticRIPOptionSetting DriverPageSize=w524h737: " -f chinese16k"
+*FoomaticRIPOptionSetting DriverPageSize=w567h839: " -f quadpost"
+*FoomaticRIPOptionSetting DriverPageSize=w612h756: " -f gletter"
+*FoomaticRIPOptionSetting DriverPageSize=w612h936: " -f glegal"
+
+*FoomaticRIPOption GSPageSize: enum CmdLine A 100
+*FoomaticRIPOptionSetting GSPageSize=FromPageSize: ""
+*FoomaticRIPOptionSetting GSPageSize=Letter: " -dDEVICEWIDTHPOINTS=612&&
+ -dDEVICEHEIGHTPOINTS=792"
+*End
+*FoomaticRIPOptionSetting GSPageSize=A4: " -dDEVICEWIDTHPOINTS=595 -dD&&
+EVICEHEIGHTPOINTS=842"
+*End
+*FoomaticRIPOptionSetting GSPageSize=A5: " -dDEVICEWIDTHPOINTS=420 -dD&&
+EVICEHEIGHTPOINTS=595"
+*End
+*FoomaticRIPOptionSetting GSPageSize=Env10: " -dDEVICEWIDTHPOINTS=297 &&
+-dDEVICEHEIGHTPOINTS=684"
+*End
+*FoomaticRIPOptionSetting GSPageSize=EnvC5: " -dDEVICEWIDTHPOINTS=459 &&
+-dDEVICEHEIGHTPOINTS=649"
+*End
+*FoomaticRIPOptionSetting GSPageSize=EnvC6: " -dDEVICEWIDTHPOINTS=323 &&
+-dDEVICEHEIGHTPOINTS=459"
+*End
+*FoomaticRIPOptionSetting GSPageSize=EnvDL: " -dDEVICEWIDTHPOINTS=312 &&
+-dDEVICEHEIGHTPOINTS=624"
+*End
+*FoomaticRIPOptionSetting GSPageSize=EnvISOB5: " -dDEVICEWIDTHPOINTS=4&&
+99 -dDEVICEHEIGHTPOINTS=709"
+*End
+*FoomaticRIPOptionSetting GSPageSize=EnvMonarch: " -dDEVICEWIDTHPOINTS&&
+=279 -dDEVICEHEIGHTPOINTS=540"
+*End
+*FoomaticRIPOptionSetting GSPageSize=Executive: " -dDEVICEWIDTHPOINTS=&&
+522 -dDEVICEHEIGHTPOINTS=756"
+*End
+*FoomaticRIPOptionSetting GSPageSize=Folio: " -dDEVICEWIDTHPOINTS=612 &&
+-dDEVICEHEIGHTPOINTS=936"
+*End
+*FoomaticRIPOptionSetting GSPageSize=Hagaki: " -dDEVICEWIDTHPOINTS=283&&
+ -dDEVICEHEIGHTPOINTS=420"
+*End
+*FoomaticRIPOptionSetting GSPageSize=HalfLetter: " -dDEVICEWIDTHPOINTS&&
+=396 -dDEVICEHEIGHTPOINTS=612"
+*End
+*FoomaticRIPOptionSetting GSPageSize=Legal: " -dDEVICEWIDTHPOINTS=612 &&
+-dDEVICEHEIGHTPOINTS=1008"
+*End
+*FoomaticRIPOptionSetting GSPageSize=Oufuku: " -dDEVICEWIDTHPOINTS=420&&
+ -dDEVICEHEIGHTPOINTS=567"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w255h581: " -dDEVICEWIDTHPOINTS=2&&
+55 -dDEVICEHEIGHTPOINTS=581"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w261h468: " -dDEVICEWIDTHPOINTS=2&&
+61 -dDEVICEHEIGHTPOINTS=468"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w278h539: " -dDEVICEWIDTHPOINTS=2&&
+78 -dDEVICEHEIGHTPOINTS=539"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w298h666: " -dDEVICEWIDTHPOINTS=2&&
+98 -dDEVICEHEIGHTPOINTS=666"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w340h499: " -dDEVICEWIDTHPOINTS=3&&
+40 -dDEVICEHEIGHTPOINTS=499"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w340h666: " -dDEVICEWIDTHPOINTS=3&&
+40 -dDEVICEHEIGHTPOINTS=666"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w369h524: " -dDEVICEWIDTHPOINTS=3&&
+69 -dDEVICEHEIGHTPOINTS=524"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w524h737: " -dDEVICEWIDTHPOINTS=5&&
+24 -dDEVICEHEIGHTPOINTS=737"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w567h839: " -dDEVICEWIDTHPOINTS=5&&
+67 -dDEVICEHEIGHTPOINTS=839"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w612h756: " -dDEVICEWIDTHPOINTS=6&&
+12 -dDEVICEHEIGHTPOINTS=756"
+*End
+*FoomaticRIPOptionSetting GSPageSize=w612h936: " -dDEVICEWIDTHPOINTS=6&&
+12 -dDEVICEHEIGHTPOINTS=936"
+*End
+
+*FoomaticRIPOption GSResolution: enum CmdLine A 100
+*FoomaticRIPOptionSetting GSResolution=FromResolution: ""
+*FoomaticRIPOptionSetting GSResolution=300x300dpi: " -r300"
+*FoomaticRIPOptionSetting GSResolution=600x600dpi: " -r600"
+*FoomaticRIPOptionSetting GSResolution=1200x600dpi: " -r1200x600"
+*FoomaticRIPOptionSetting GSResolution=1200x1200dpi: " -r1200"
+
+*FoomaticRIPOption DriverResolution: enum CmdLine B 100
+*FoomaticRIPOptionSetting DriverResolution=FromResolution: ""
+*FoomaticRIPOptionSetting DriverResolution=300x300dpi: " -r 300"
+*FoomaticRIPOptionSetting DriverResolution=600x600dpi: " -r 600"
+*FoomaticRIPOptionSetting DriverResolution=1200x600dpi: " -r 1200x600"
+*FoomaticRIPOptionSetting DriverResolution=1200x1200dpi: " -r 1200"
+
+*CloseGroup: General
+
+
+*% Generic boilerplate PPD stuff as standard PostScript fonts and so on
+
+*DefaultFont: Courier
+*Font AvantGarde-Book: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-BookOblique: Standard "(001.006S)" Standard ROM
+*Font AvantGarde-Demi: Standard "(001.007S)" Standard ROM
+*Font AvantGarde-DemiOblique: Standard "(001.007S)" Standard ROM
+*Font Bookman-Demi: Standard "(001.004S)" Standard ROM
+*Font Bookman-DemiItalic: Standard "(001.004S)" Standard ROM
+*Font Bookman-Light: Standard "(001.004S)" Standard ROM
+*Font Bookman-LightItalic: Standard "(001.004S)" Standard ROM
+*Font Courier: Standard "(002.004S)" Standard ROM
+*Font Courier-Bold: Standard "(002.004S)" Standard ROM
+*Font Courier-BoldOblique: Standard "(002.004S)" Standard ROM
+*Font Courier-Oblique: Standard "(002.004S)" Standard ROM
+*Font Helvetica: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Narrow-Bold: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-BoldOblique: Standard "(001.007S)" Standard ROM
+*Font Helvetica-Narrow-Oblique: Standard "(001.006S)" Standard ROM
+*Font Helvetica-Oblique: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Bold: Standard "(001.009S)" Standard ROM
+*Font NewCenturySchlbk-BoldItalic: Standard "(001.007S)" Standard ROM
+*Font NewCenturySchlbk-Italic: Standard "(001.006S)" Standard ROM
+*Font NewCenturySchlbk-Roman: Standard "(001.007S)" Standard ROM
+*Font Palatino-Bold: Standard "(001.005S)" Standard ROM
+*Font Palatino-BoldItalic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Italic: Standard "(001.005S)" Standard ROM
+*Font Palatino-Roman: Standard "(001.005S)" Standard ROM
+*Font Symbol: Special "(001.007S)" Special ROM
+*Font Times-Bold: Standard "(001.007S)" Standard ROM
+*Font Times-BoldItalic: Standard "(001.009S)" Standard ROM
+*Font Times-Italic: Standard "(001.007S)" Standard ROM
+*Font Times-Roman: Standard "(001.007S)" Standard ROM
+*Font ZapfChancery-MediumItalic: Standard "(001.007S)" Standard ROM
+*Font ZapfDingbats: Special "(001.004S)" Standard ROM
+
